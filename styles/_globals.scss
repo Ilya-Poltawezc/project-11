@@ -1,0 +1,45 @@
+@use 'helpers' as *;
+
+body {
+    @include fluid-text(18, 24);
+
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family-base);
+    letter-spacing: -0.03em;
+    color: var(--color-grey);
+    background-color: var(--color-light);
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+    transition-duration: var(--transition-duration);
+}
+
+a {
+    color: var(--color-dark);
+
+    @include hover {
+        color: var(--color-orange);
+    }
+
+    &[class] {
+        text-decoration: none;
+    }
+}
+
+p {
+    font-family: var(--font-family-base);
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-accent);
+    letter-spacing: 1px;
+    line-height: 1.3;
+}

@@ -1,0 +1,32 @@
+@use 'helpers' as *;
+
+:root {
+    --color-light: #ffffff;
+    --color-dark: #000000;
+    --color-grey: #bababa;
+    --color-darkGrey: #1E212C;
+    --color-form: #F4F5F7;
+    --color-orange: #FF5A30;
+    --color-lightOrange: #F89828;
+    --color-red: #F52F6E;
+    --color-blue: #5A87FC;
+    --color-green: #03CEA4;
+    --background-form: rgba(255, 255, 255, 0.12);
+
+
+    --font-family-base: 'NataSans', sans-serif;
+    --font-family-accent: 'Ubuntu', sans-serif;
+
+    --borderLight: rem(1) solid var(--color-light);
+    --borderGrey: rem(1) solid var(--color-grey);
+    --box-shadowOrange: 0px 60px 80px -20px rgba(255, 90, 48, 0.16), 0px 26px 24px -10px rgba(255, 90, 48, 0.1), 0px 12px 10px -6px rgba(255, 90, 48, 0.08), 0px 4px 4px -4px rgba(30, 33, 44, 0.05);
+    --box-shadowGrey: box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+
+    --container-width: #{rem(1230)};
+    --container-padding-x: #{rem(16)};
+    --transition-duration: 0.2s;
+
+    @include laptop {
+        --container-width: #{rem(1230)};
+    }
+}
