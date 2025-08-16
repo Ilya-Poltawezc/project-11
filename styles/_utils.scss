@@ -10,6 +10,22 @@
     @include visually-hidden;
 }
 
+.button {
+    color: var(--color-light);
+    background-color: var(--color-orange);
+    border: none;
+    border-radius: rem(4);
+    text-transform: uppercase;
+    font-size: rem(16);
+    font-weight: 700;
+    padding: rem(10) rem(40);
+
+    @include hover {
+        background-color: transparent;
+        border: var(--borderLight);
+    }
+}
+
 .button-hidden {
     @include hide;
 }
@@ -20,4 +36,9 @@
     width: 75px !important;
     max-height: 180px !important;
     transition: max-height 0.2s;
+}
+
+.is-active {
+    opacity: 1 !important;
+    transition-duration: ease 0.2s;
 }
