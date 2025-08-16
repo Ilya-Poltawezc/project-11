@@ -1,0 +1,183 @@
+@use '../helpers' as *;
+
+.values {
+    &__title {
+        padding-top: rem(120);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: rem(60);
+        position: relative;
+
+        @include mobile {
+            padding-top: rem(60);
+        }
+
+        &-description {
+            font-size: rem(18);
+            text-align: center;
+
+            @include mobile {
+                text-align: start;
+            }
+        }
+
+        &-video {
+            border-radius: rem(4);
+        }
+
+        &-button {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: calc(100% - 38%);
+            background-color: var(--color-orange);
+            border: rem(1) solid var(--color-orange);
+            border-radius: 50%;
+            width: rem(80);
+            aspect-ratio: 1;
+
+            @include mobile {
+                width: rem(50);
+                top: calc(100% - 30%);
+            }
+
+            @include hover {
+                opacity: 0.6;
+                border: rem(1) solid var(--color-light);
+            }
+        }
+
+        &-svg {
+            color: var(--color-light);
+            width: rem(26);
+            aspect-ratio: 1;
+
+            @include mobile {
+                width: rem(16);
+            }
+        }
+
+        &-valume {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: rem(40);
+            aspect-ratio: 1;
+            border: rem(1) solid var(--color-darkGrey);
+            background-color: var(--color-darkGrey);
+            opacity: 0.3;
+            border-radius: 50%;
+            position: absolute;
+            top: calc(100% - 8%);
+            right: calc(100% - 6%);
+
+            @include tablet {
+                top: calc(100% - 10%);
+                right: calc(100% - 10%);
+            }
+
+            @include mobile {
+                width: rem(30);
+                top: calc(100% - 9%);
+                right: calc(100% - 9%);
+            }
+
+            @include hover {
+                opacity: 1;
+            }
+        }
+
+        &-svgTwo {
+            color: var(--color-light);
+        }
+    }
+
+    &__body {
+        padding-top: rem(180);
+
+        @include mobile {
+            padding-top: rem(80);
+        }
+
+        &-block1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-description {
+            font-size: rem(18);
+            text-align: center;
+        }
+
+        &-block2 {
+            padding-top: rem(60);
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: rem(90);
+
+            @include tablet {
+                grid-template-columns: repeat(2, 1fr);
+                row-gap: rem(30);
+            }
+
+            @include mobile {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        &-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: rem(15);
+            border-inline: rem(1) solid var(--color-grey);
+            border-radius: rem(20);
+
+            //&:nth-child(2) {
+               //border-inline: rem(1) solid var(--color-grey);
+            //}
+        }
+        
+        &-svg {
+            width: rem(48);
+            aspect-ratio: 1;
+            color: var(--color-orange);
+        }
+
+        &-p {
+            font-size: rem(16);
+            text-align: center;
+        }
+    }
+}
+
+@media(max-width: 550px) {
+    .values__title-button {
+        top: calc(100% - 25%);
+    }
+    .values__title-valume {
+        top: calc(100% - 9%);
+        right: calc(100% - 11%);
+    }
+}
+
+@media(max-width: 460px) {
+    .values__title-valume {
+        top: calc(100% - 10%);
+        right: calc(100% - 14%);
+    }
+}
+
+@media(max-width: 330px) {
+    .values__title-button {
+        top: calc(100% - 18%);
+    }
+    .values__title-valume {
+        top: calc(100% - 9%);
+        right: calc(100% - 17%);
+    }
+}

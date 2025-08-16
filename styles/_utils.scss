@@ -42,3 +42,11 @@
     opacity: 1 !important;
     transition-duration: ease 0.2s;
 }
+
+.play-button {
+    opacity: 0;
+
+    @include hover {
+        opacity: 1;
+    }
+}
