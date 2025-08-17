@@ -13,7 +13,7 @@
 .button {
     color: var(--color-light);
     background-color: var(--color-orange);
-    border: none;
+    border: rem(1) solid var(--color-orange);
     border-radius: rem(4);
     text-transform: uppercase;
     font-size: rem(16);
@@ -22,7 +22,7 @@
 
     @include hover {
         background-color: transparent;
-        border: var(--borderLight);
+        color: var(--color-orange)
     }
 }
 

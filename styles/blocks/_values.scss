@@ -153,6 +153,91 @@
             text-align: center;
         }
     }
+
+    &__form {
+        margin-top: rem(120);
+        border-radius: rem(4);
+        box-shadow: 0 4px 4px -4px rgba(30, 33, 44, 0.03), 0 12px 10px -6px rgba(154, 156, 165, 0.04), 0 30px 24px -10px rgba(154, 156, 165, 0.05), 0 80px 80px -20px rgba(154, 156, 165, 0.08);
+
+        @include mobile {
+            margin-inline: rem(20);
+        }
+
+        &-title {
+            padding-top: rem(48);
+            display: flex;
+            justify-content: center;
+        }
+
+        &-form {
+            padding-inline: rem(44);
+            padding-bottom: rem(48);
+            padding-top: rem(32);
+            display: flex;
+            align-items: end;
+            column-gap: rem(24);
+
+            @include laptop {
+                row-gap: rem(30);
+                flex-wrap: wrap;
+            }
+
+            @include mobile {
+                display: grid;
+                grid-template-columns: 1fr;
+                padding-inline: 0;
+            }
+        }
+
+        &-block {
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(8);
+        }
+
+        &-label {
+            font-size: rem(14);
+            color: var(--color-darkGrey);
+        }
+
+        &-input {
+            padding-left: rem(16);
+            padding-right: rem(80);
+            padding-block: rem(12);
+            font-size: rem(14);
+            border-radius: rem(4);
+            border: var(--borderGrey);
+            background-color: var(--background-form);
+
+            @include mobile {
+                padding-right: 0;
+            }
+        }
+
+        &-inputThree {
+           padding-left: rem(16);
+           padding-right: rem(280);
+           padding-block: rem(12);
+           font-size: rem(14);
+           border-radius: rem(4);
+           border: var(--borderGrey);
+           background-color: var(--background-form);
+           
+           @include mobile {
+                padding-right: 0;
+            }
+        }
+
+        &-button {
+            padding-inline: rem(32);
+
+            @include hover {
+                background-color: transparent;
+                color: var(--color-orange);
+                border: rem(1) solid var(--color-orange);
+            }
+        }
+    }
 }
 
 @media(max-width: 550px) {
