@@ -10,4 +10,8 @@
 
 @use 'blocks/values';
 
-@use 'blocks/services'
+@use 'blocks/services';
+
+@use 'blocks/project';
+
+@use 'blocks/supported';

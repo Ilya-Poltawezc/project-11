@@ -26,6 +26,22 @@
     }
 }
 
+.button-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(48);
+    aspect-ratio: 1;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+
+    @include hover {
+        background-color: var(--color-orange);
+        color: var(--color-light);
+    }
+}
+
 .button-hidden {
     @include hide;
 }
@@ -49,4 +65,11 @@
     @include hover {
         opacity: 1;
     }
+}
+
+.button-hover {
+    @include show;
+
+    max-height: rem(44) !important;
+
 }
