@@ -73,3 +73,10 @@
     max-height: rem(44) !important;
 
 }
+
+.requared {
+    &::after { 
+        content: '*';
+        color: var(--color-red);
+    }
+}
