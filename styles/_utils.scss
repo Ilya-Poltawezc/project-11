@@ -80,3 +80,8 @@
         color: var(--color-red);
     }
 }
+
+.is-active {
+    color: var(--color-orange);
+    pointer-events: none;
+}
