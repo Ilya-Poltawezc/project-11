@@ -1,0 +1,161 @@
+@use '../helpers' as *;
+
+.offer {
+    padding-block: rem(120);
+
+    @include mobile {
+        padding-block: rem(40);
+    }
+
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        column-gap: rem(50);
+
+        @include tablet {
+            flex-direction: column;
+            row-gap: rem(20);
+            align-items: center;
+        }
+
+        &-img {
+            border-radius: rem(4);
+        }
+
+        &-block {
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(60);
+        }
+
+        &-blockCard {
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(24);
+        }
+
+        &-card {
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(12);
+
+            &--buttons {
+                display: flex;
+                align-items: start;
+                column-gap: rem(20);
+            }
+
+            &--button {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: rem(34);
+                height: rem(34);
+                background-color: transparent;
+                border: none;
+
+                &:active {
+                   
+                }
+            }
+
+            &--slash {
+                width: rem(24);
+                height: rem(2);
+                background-color: var(--color-orange);
+
+                &:nth-child(2) {
+                    transition-duration: 0.2s;
+                    position: relative;
+                    top: -1px;
+                    transform: rotate(90deg);
+                }
+            }
+
+            &--title {
+                @include fluid-text(28, 20);
+            }
+
+            &--description {
+                overflow: hidden;
+                max-height: 0px;
+                padding-left: rem(55);
+                font-size: rem(16);
+                transition-duration: 0.3s;
+            }
+        }
+    }
+
+    &__body  {
+        padding-top: rem(180);
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(60);
+
+        @include mobile {
+            row-gap: rem(40);
+            padding-top: rem(80);
+        }
+
+        &-title {
+            @include fluid-text(46, 28);
+        }
+
+        &-block {
+            display: flex;
+            column-gap: rem(30);
+            flex-wrap: wrap;
+        }
+
+        &-card {
+            max-width: rem(285);
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            row-gap: rem(16);
+
+            &--div {
+                display: flex;  
+                align-items: center;
+            }
+
+            @keyframes colorChange {
+                from { color: var(--color-blue) }
+                to { color: var(--color-green); }
+            }
+
+            &--button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: rem(84);
+                height: rem(84);
+                font-size: rem(46);
+                font-weight: 700;
+                color: var(--color-grey);
+                background-color: transparent;
+                border-radius: 50%;
+                border: none;
+                animation-name: colorChange;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+                transition-duration: 0.2s;
+
+                @include hover {
+                    color: var(--color-orange);
+                    background-color: rgb(255, 90, 48, 0.12);
+                    outline: rem(20) solid rgb(255, 90, 48, 0.06);
+                }
+            }
+
+            &--title {
+                font-size: rem(20);
+            }
+
+            &--description {
+                font-size: rem(16);
+            }
+        }
+    }
+}

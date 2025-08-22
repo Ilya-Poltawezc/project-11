@@ -11,6 +11,7 @@ class Hover {
 
     constructor() {
         this.rootElement = document.querySelector(this.selectors.root)
+        if(!this.rootElement) return
         this.cardsElements = this.rootElement.querySelectorAll(this.selectors.cards)
         this.buttonsElements = this.rootElement.querySelectorAll(this.selectors.buttons) // сделал массив
         this.bindEvents()

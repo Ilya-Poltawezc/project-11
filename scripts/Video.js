@@ -11,6 +11,7 @@ class Video {
 
     constructor() {
         this.rootElement = document.querySelector(this.selectors.root)
+        if(!this.rootElement) return
         this.videoElement = this.rootElement.querySelector(this.selectors.video)
         this.buttonElement = this.rootElement.querySelector(this.selectors.button)
         this.bindEvents()

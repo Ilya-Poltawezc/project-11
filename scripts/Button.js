@@ -10,6 +10,7 @@ class Button {
 
     constructor() {
         this.rootElement = document.querySelector(this.selectors.root)
+        if(!this.rootElement) return
         this.buttonsElemetns = this.rootElement.querySelectorAll(this.selectors.buttons)
         this.bindEvents()
     }
