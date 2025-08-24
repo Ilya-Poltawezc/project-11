@@ -1,0 +1,48 @@
+@use '../helpers' as *;
+
+.company {
+    &__title {
+        padding-top: rem(180);
+        padding-bottom: rem(110);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: rem(60);
+
+        @include mobile {
+            padding-top: rem(120);
+            padding-bottom: rem(80);
+            row-gap: rem(30);
+        }
+
+        &-block {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            column-gap: rem(102);
+
+            @include laptop {
+                grid-template-columns: repeat(3, 1fr);
+                row-gap: rem(50);
+            }
+
+            @include mobile {
+                column-gap: rem(30);
+                row-gap: rem(30);
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            &--link {
+                @include hover {
+                    transform: scale(1.1);
+                }
+            }
+
+            &--img {
+                @include hover {
+                    filter: drop-shadow(0 0 0.55rem var(--color-orange));
+                    transition-duration: var(--transition-duration);
+                }
+            }
+        }
+    }
+}
