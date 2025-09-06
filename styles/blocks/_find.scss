@@ -1,0 +1,130 @@
+@use '../helpers' as *;
+
+.find {
+    padding-top: rem(120);
+    display: grid;
+    grid-template-columns: 60% auto;
+    column-gap: rem(135);
+
+    @include laptop {
+        grid-template-columns: 1fr;
+        row-gap: rem(40);
+    }
+
+    @include mobile {
+        padding-top: rem(50);
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(24);
+
+        &-card {
+            padding: rem(33) rem(40);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: rem(1) solid var(--color-grey);
+            border-radius: rem(4);
+
+            @include mobile {
+                flex-direction: column;
+                align-items: start;
+                row-gap: rem(20);
+                padding: rem(20) rem(15);
+            }
+
+            @include hover {
+                box-shadow: 0 4px 4px -4px rgba(30, 33, 44, 0.03), 0 12px 10px -6px rgba(154, 156, 165, 0.04), 0 30px 24px -10px rgba(154, 156, 165, 0.05), 0 80px 80px -20px rgba(154, 156, 165, 0.08);
+                transition-duration: var(--transition-duration);
+                transform: scale(1.02);
+            }
+        }
+
+        &-block {
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(8);
+
+            &--block {
+                display: flex;
+                column-gap: rem(12);
+            }
+
+            &--descriptionOne {
+                display: flex;
+                align-items: center;
+                column-gap: rem(8);
+                font-size: rem(14);
+                color: var(--color-text);
+
+                &::before {
+                    content: ' ';
+                    width: rem(16);
+                    aspect-ratio: 1;
+                    background: url('../../icons/find/map.svg') center/cover no-repeat;
+                }
+            }
+
+            &--description {
+                font-size: rem(14);
+                color: var(--color-text);
+            }
+
+            &--descriptionTwo {
+                display: flex;
+                align-items: center;
+                column-gap: rem(8);
+                font-size: rem(14);
+                color: var(--color-text);
+
+                &::before {
+                    content: ' ';
+                    width: rem(16);
+                    aspect-ratio: 1;
+                    background: url('../../icons/find/time.svg') center/cover no-repeat;
+                }
+            }
+
+            &--title {
+                font-size: rem(20);
+            }
+
+            &--button {
+                font-size: rem(14);
+            }
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(50);
+
+        &-block1 {
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(24);
+
+            &--title {
+                font-size: rem(28);
+            }
+
+            &--description {
+                color: var(--color-darkGrey);
+                font-size: rem(18);
+            }
+        }
+
+        &-block2 {
+            display: flex;
+            column-gap: rem(30);
+
+            @include mobile {
+                flex-direction: column;
+                row-gap: rem(20);
+            }
+        }
+    }
+}

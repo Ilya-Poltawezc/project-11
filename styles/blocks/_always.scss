@@ -1,0 +1,66 @@
+@use '../helpers' as *;
+
+.always {
+    padding-block: rem(180);
+
+    @include mobile {
+        padding-block: rem(80);
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        row-gap: rem(24);
+        flex-direction: column;
+
+        &-description {
+            font-size: rem(18);
+        }
+    }
+
+    &__body {
+        padding-top: rem(60);
+        display: flex;
+        column-gap: rem(94);
+
+        @include tablet {
+            flex-direction: column;
+            row-gap: rem(40);
+        }
+
+        &-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: rem(8);
+
+            &--title {
+                font-size: rem(20);
+            }
+
+            &--description {
+                color: var(--color-text);
+                font-size: rem(16);
+                text-align: center;
+            }
+
+            &--div {
+                display: flex;
+                flex-direction: column;
+                row-gap: rem(24);
+                align-items: center;
+            }
+
+            &--svg {
+                width: rem(48);
+                aspect-ratio: 1;
+                color: var(--color-orange);
+            }
+        }
+
+        &-div {
+            border: 1px solid var(--color-text);
+            opacity: 0.2;
+        }
+    }
+}
