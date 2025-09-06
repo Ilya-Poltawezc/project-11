@@ -100,6 +100,7 @@
             display: flex;
             justify-content: center;
             padding-bottom: rem(120);
+            column-gap: rem(4);
 
             @include tablet {
                 flex-direction: column;
@@ -114,7 +115,7 @@
             &--link {
                 font-size: rem(20);
                 color: var(--color-orange);
-                text-decoration: solid;
+                text-decoration: underline !important;
 
                 @include hover {
                     color: var(--color-darkGrey);

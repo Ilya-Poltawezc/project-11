@@ -4417,6 +4417,7 @@ h5 {
   display: flex;
   justify-content: center;
   padding-bottom: 7.5rem;
+  column-gap: 0.25rem;
 }
 @media (width <= 63.99875rem) {
   .team__body-text {
@@ -4431,7 +4432,7 @@ h5 {
 .team__body-text--link {
   font-size: 1.25rem;
   color: var(--color-orange);
-  text-decoration: solid;
+  text-decoration: underline !important;
 }
 @media (any-hover: hover) {
   .team__body-text--link:hover {
@@ -4442,6 +4443,26 @@ h5 {
   .team__body-text--link:active {
     color: var(--color-darkGrey);
   }
+}
+
+.worder {
+  background-color: var(--color-form);
+}
+.worder__title {
+  padding-block: 6.25rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3.75rem;
+  align-items: center;
+}
+@media (width <= 47.99875rem) {
+  .worder__title {
+    padding-block: 3.125rem;
+  }
+}
+.worder__title-title {
+  font-size: clamp(1.875rem, 1.5526859504rem + 1.3223140496vw, 2.875rem);
+  text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */
