@@ -1,0 +1,247 @@
+@use '../helpers' as *;
+
+.cottage {
+    background: url('../../images/cottage/bg.png') right/50% no-repeat;
+
+    &__div {
+        padding-block: rem(22);
+        display: flex;
+        justify-content: center;
+        column-gap: rem(172);
+
+        @include laptop {
+            flex-direction: column;
+            align-items: center;
+            row-gap: rem(30);
+        } 
+        
+        @include mobile {
+            padding-inline: rem(22);
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: start;
+            column-gap: 0;
+        }
+    }
+
+
+    &__body {
+        display: flex;
+        align-items: center;
+        column-gap: rem(60);
+
+        @include mobile {
+            row-gap: rem(10);
+            flex-direction: column;
+        }
+
+        &-list {
+            display: flex;
+            column-gap: rem(40);
+
+            @include mobile {
+                width: 0;
+                max-height: 0;
+                overflow-y: hidden;
+                transition-duration: 0.2s;
+            }
+        }
+
+        &-link {
+            font-size: rem(16);
+            font-weight: 700;
+        }
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        column-gap: rem(36);
+
+        @include mobile {
+            @include visually-hidden;
+
+            flex-direction: column;
+            align-items: start;
+            row-gap: rem(10);
+        }
+
+        &-div1 {
+            display: flex;
+            align-items: center;
+            column-gap: rem(12);
+
+            &::before {
+                content: ' ';
+                width: rem(40);
+                height: rem(38);
+                background: url('../../icons/header-phone.svg');
+            }
+        }
+
+        &-div2 {
+            display: flex;
+            align-items: center;
+            column-gap: rem(12);
+
+            &::before {
+                content: ' ';
+                width: rem(40);
+                height: rem(38);
+                background: url('../../icons/header-chat.svg');
+            }
+        }
+
+        &-block {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-description {
+            font-size: rem(14);
+            font-weight: 700;
+            color: var(--color-dark);
+        }
+
+        &-contacts {
+            font-size: rem(18);
+        }
+    }
+
+    &__button {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: center;
+        row-gap: rem(5);
+        width: rem(40);
+        height: rem(30);
+        background-color: transparent;
+        border: none;
+
+        @include mobile {
+            @include show;
+        }
+        
+        &-slash {
+            width: 100%;
+            height: rem(2);
+            background-color: var(--color-darkGrey);
+            border-radius: rem(6);
+
+            &:nth-child(3) {
+                width: rem(15);
+            }
+        }
+    }
+
+    &__block {
+        padding-top: rem(80);
+        padding-bottom: rem(179);
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(40);
+
+        @include mobile {
+            padding-top: rem(10);
+            padding-bottom: rem(40);
+            row-gap: rem(20);
+        }
+
+        &-block {
+            display: flex;
+            column-gap: rem(8);
+
+            &--description {
+                font-size: rem(14);
+                color: var(--color-darkGrey);
+            }
+
+            &--desc {
+                font-size: rem(14);
+
+                @include mobile {
+                    color: var(--color-darkGrey)
+                }
+            }
+        }
+
+        &-description {
+            @include fluid-text(20, 16);
+
+            color: var(--color-text);
+
+            @include mobile {
+                color: var(--color-darkGrey);
+            }
+        }
+
+        &-blockImg {
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(20);
+
+            &--div {
+                border-radius: rem(4);
+                padding: rem(226) rem(32);
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background: url('../../images/cottage/bgImage1.png') center/cover no-repeat;
+
+                @include mobile {
+                    padding: rem(50) rem(16);
+                }
+            }
+
+            &--button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: rem(48);
+                aspect-ratio: 1;
+                background: var(--color-light);
+                opacity: 0.5;
+                border-radius: 50%;
+                border: none;
+
+                @include hover {
+                    opacity: 1;
+                }
+
+                @include mobile {
+                    width: rem(38);
+                }
+            }
+
+            &--svg {
+                width: rem(24);
+            }
+
+            &--div1 {
+                display: flex;
+                justify-content: start;
+                flex-wrap: wrap;
+                column-gap: rem(20);
+                row-gap: rem(20);
+
+                @include mobile {
+                    justify-content: center;
+                }
+            }
+
+            &--buttons {
+                border: none;
+                background-color: transparent;
+            }
+
+            &--img {
+                opacity: 0.6;
+                pointer-events: auto;
+                cursor: pointer;
+            }
+        }
+    }
+}

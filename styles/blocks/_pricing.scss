@@ -1,0 +1,181 @@
+@use '../helpers' as *;
+
+.pricing {
+    background: url('../../images/pricing/Background.png') center/cover no-repeat;
+
+    &__title {
+        padding-top: rem(80);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: rem(24);
+
+        &-description {
+            font-size: rem(18);
+        }
+    }
+
+    &__body {
+        padding-top: rem(60);
+
+        &-card {
+            padding-inline: rem(24);
+            padding-block: rem(16);
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            background-color: var(--color-light);
+
+            @include mobile {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            &--title {
+                font-size: rem(18);
+            }
+
+            &--description {
+                font-size: rem(16);
+                color: var(--color-text);
+            }
+
+            &:nth-child(1) {
+                padding-bottom: rem(24);
+                padding-top: rem(32);
+
+                @include mobile {
+                    padding-inline: rem(10);
+                }
+            }
+
+            &:nth-child(even) {
+                background-color: var(--color-form);
+            }
+        }
+
+        &-card1 {
+            padding: rem(32) rem(51);
+            display: flex;
+            justify-content: end;
+            background-color: var(--color-light);
+
+            @include mobile {
+                width: 100%;
+                padding-inline: rem(24);
+                justify-content: center;
+            }
+        }
+
+        &-block1 {
+            display: flex;
+            column-gap: rem(80);
+
+            @include tablet {
+                column-gap: rem(30);
+            }
+
+            @include mobile {
+                row-gap: rem(20);
+                flex-direction: column;
+            }
+
+            &--button {
+                padding-inline: rem(24);
+                color: var(--color-orange);
+                background-color: transparent;
+
+                @include mobile {
+                    font-size: rem(10);
+                }
+
+                @include hover {
+                    background-color: var(--color-orange);
+                    color: var(--color-light);
+                }
+            }
+        }
+
+        &-block {
+            display: flex;
+            justify-content: space-between;
+            column-gap: rem(1);
+
+            @include mobile {
+                width: 100%;
+            }
+        }
+
+        &-div {
+            width: rem(245);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: rem(2);
+
+            @include tablet {
+                width: rem(150);
+            }
+
+            @include mobile {
+                width: auto;
+            }
+
+            &--title {
+                @include fluid-text(24, 16)
+            }
+
+            &--description {
+                @include fluid-text(18, 14);
+            }
+
+            &--svg {
+                width: rem(24);
+                height: rem(24);
+                color: var(--color-orange);
+            }
+        }
+    }
+
+    &__block {
+        padding-block: rem(120);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: rem(60);
+
+        @include mobile {
+            padding-block: rem(50);
+        }
+
+        &-block {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            column-gap: rem(102);
+
+            @include laptop {
+                grid-template-columns: repeat(3, 1fr);
+                row-gap: rem(50);
+            }
+
+            @include mobile {
+                column-gap: rem(30);
+                row-gap: rem(30);
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            &--link {
+                @include hover {
+                    transform: scale(1.1);
+                }
+            }
+
+            &--img {
+                @include hover {
+                    filter: drop-shadow(0 0 0.55rem var(--color-orange));
+                    transition-duration: var(--transition-duration);
+                }
+            }
+        }
+    }
+}

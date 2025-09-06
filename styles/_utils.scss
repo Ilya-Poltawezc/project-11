@@ -1,0 +1,106 @@
+@use 'helpers' as *;
+
+.container {
+    max-width: calc(var(--container-width) + var(--container-padding-x) *2);
+    margin-inline: auto;
+    padding-inline: var(--container-padding-x);
+}
+
+.visually-hidden {
+    @include visually-hidden;
+}
+
+.button {
+    color: var(--color-light);
+    background-color: var(--color-orange);
+    border: rem(1) solid var(--color-orange);
+    border-radius: rem(4);
+    text-transform: uppercase;
+    font-size: rem(16);
+    font-weight: 700;
+    padding: rem(10) rem(40);
+
+    @include hover {
+        background-color: transparent;
+        color: var(--color-orange)
+    }
+}
+
+.button-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(48);
+    aspect-ratio: 1;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+
+    @include hover {
+        background-color: var(--color-orange);
+        color: var(--color-light);
+    }
+}
+
+.button-hidden {
+    @include hide;
+}
+
+.menu-drop {
+    right: 40px;
+    flex-direction: column;
+    width: 75px !important;
+    max-height: 180px !important;
+    transition: max-height 0.2s;
+}
+
+.is-active {
+    opacity: 1 !important;
+    transition-duration: ease 0.2s;
+}
+
+.play-button {
+    opacity: 0;
+
+    @include hover {
+        opacity: 1;
+    }
+}
+
+.button-hover {
+    @include show;
+
+    max-height: rem(44) !important;
+
+}
+
+.requared {
+    &::after { 
+        content: '*';
+        color: var(--color-red);
+    }
+}
+
+.is-active {
+    color: var(--color-orange);
+    pointer-events: none;
+}
+
+.overflow-text {
+    overflow: visible !important;
+    max-height: rem(165) !important;
+    //transition-duration: 0.3s;
+}
+
+.rotate-slash {
+    transform: rotate(0deg) !important;
+    //animation-duration: 0.7s;
+}
+
+.opacity-img {
+    opacity: 1 !important;
+}
+
+.active {
+    color: var(--color-orange);
+}

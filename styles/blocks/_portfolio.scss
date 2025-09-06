@@ -1,0 +1,229 @@
+@use '../helpers' as *;
+
+.portfolio {
+    background: url('../../images/portfolio/background.png') right/cover no-repeat;
+
+    &__div {
+        padding-block: rem(22);
+        display: flex;
+        justify-content: center;
+        column-gap: rem(172);
+
+        @include laptop {
+            flex-direction: column;
+            align-items: center;
+            row-gap: rem(30);
+        } 
+        
+        @include mobile {
+            padding-inline: rem(22);
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: start;
+            column-gap: 0;
+        }
+    }
+
+
+    &__body {
+        display: flex;
+        align-items: center;
+        column-gap: rem(60);
+
+        @include mobile {
+            row-gap: rem(10);
+            flex-direction: column;
+        }
+
+        &-list {
+            display: flex;
+            column-gap: rem(40);
+
+            @include mobile {
+                width: 0;
+                max-height: 0;
+                overflow-y: hidden;
+                transition-duration: 0.2s;
+            }
+        }
+
+        &-link {
+            font-size: rem(16);
+            font-weight: 700;
+        }
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        column-gap: rem(36);
+
+        @include mobile {
+            @include visually-hidden;
+
+            flex-direction: column;
+            align-items: start;
+            row-gap: rem(10);
+        }
+
+        &-div1 {
+            display: flex;
+            align-items: center;
+            column-gap: rem(12);
+
+            &::before {
+                content: ' ';
+                width: rem(40);
+                height: rem(38);
+                background: url('../../icons/header-phone.svg');
+            }
+        }
+
+        &-div2 {
+            display: flex;
+            align-items: center;
+            column-gap: rem(12);
+
+            &::before {
+                content: ' ';
+                width: rem(40);
+                height: rem(38);
+                background: url('../../icons/header-chat.svg');
+            }
+        }
+
+        &-block {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-description {
+            font-size: rem(14);
+            font-weight: 700;
+            color: var(--color-dark);
+        }
+
+        &-contacts {
+            font-size: rem(18);
+        }
+    }
+
+    &__button {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: center;
+        row-gap: rem(5);
+        width: rem(40);
+        height: rem(30);
+        background-color: transparent;
+        border: none;
+
+        @include mobile {
+            @include show;
+        }
+        
+        &-slash {
+            width: 100%;
+            height: rem(2);
+            background-color: var(--color-darkGrey);
+            border-radius: rem(6);
+
+            &:nth-child(3) {
+                width: rem(15);
+            }
+        }
+    }
+
+    &__block {
+        padding-top: rem(80);
+        padding-bottom: rem(179);
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(40);
+
+        @include mobile {
+            padding-top: rem(10);
+            padding-bottom: rem(40);
+            row-gap: rem(20);
+        }
+
+        &-block {
+            display: flex;
+            column-gap: rem(8);
+
+            &--description {
+                font-size: rem(14);
+                color: var(--color-darkGrey);
+            }
+
+            &--desc {
+                font-size: rem(14);
+
+                @include mobile {
+                    color: var(--color-darkGrey)
+                }
+            }
+        }
+
+        &-description {
+            @include fluid-text(20, 16);
+
+            color: var(--color-text);
+
+            @include mobile {
+                color: var(--color-darkGrey);
+            }
+        }
+    }
+
+    &__contact {
+        position: relative;
+        top: rem(80);
+        display: flex;
+        justify-content: center;
+        column-gap: rem(20);
+        flex-wrap: wrap;
+        row-gap: rem(20);
+
+        &-card {
+            width: rem(230);
+            padding-top: rem(32);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: rem(16);
+            background-color: var(--color-light);
+            border-radius: rem(4);
+            box-shadow: 0 4px 4px -4px rgba(30, 33, 44, 0.03), 0 12px 10px -6px rgba(154, 156, 165, 0.04), 0 30px 24px -10px rgba(154, 156, 165, 0.05), 0 80px 80px -20px rgba(154, 156, 165, 0.08);
+
+            @include hover {
+                background-color: var(--color-orange);
+                box-shadow: 0 4px 4px -4px rgba(30, 33, 44, 0.05), 0 12px 10px -6px rgba(255, 90, 48, 0.08), 0 26px 24px -10px rgba(255, 90, 48, 0.1), 0 60px 80px -20px rgba(255, 90, 48, 0.16);
+                transition-duration: var(--transition-duration);
+            }
+
+            &--svg {
+                width: rem(48);
+                height: rem(48);
+                color: var(--color-orange);
+
+                @include hover {
+                    color: var(--color-light);
+                }
+            }
+
+            &--description {
+                font-size: rem(16);
+                color: var(--color-text);
+                font-weight: 700;
+                padding-bottom: rem(32);
+
+                @include hover {
+                    color: var(--color-light);
+                }
+            }
+        }
+    }
+}

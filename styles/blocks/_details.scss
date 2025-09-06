@@ -1,0 +1,120 @@
+@use '../helpers' as *;
+
+.details {
+    background: url('../../images/details/bg.png') center/cover no-repeat;
+
+    &__div {
+        display: flex;
+        justify-content: end;
+        padding-block: rem(80);
+
+        @include mobile {
+            justify-content: center;
+        }
+    }
+
+    &__forma {
+        padding: rem(40) rem(48);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        row-gap: rem(20);
+        background-color: var(--color-light);
+        border-radius: rem(4);
+
+        @include mobile {
+            padding: rem(25) rem(15);
+        }
+
+        &-title {
+            @include fluid-text(28, 22);
+        }
+
+        &-block {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(8);
+        }
+
+        &-label {
+            display: flex;
+            column-gap: rem(4);
+            font-size: rem(14);
+            color: var(--color-dark);
+        }
+
+        &-input {
+            font-size: rem(14);
+            padding-block: rem(12);
+            padding-inline: rem(16);
+            border-radius: rem(4);
+            border: var(--borderGrey);
+            background-color: var(--background-form);
+
+            @include hover {
+                border-color: var(--color-orange);
+            }
+        }
+
+        &-textarea {
+            height: rem(66);
+            font-size: rem(14);
+            padding-top: rem(12);
+            padding-inline: rem(16);
+            border-radius: rem(4);
+            border: var(--borderGrey);
+            background-color: var(--background-form);
+
+            @include hover {
+                border-color: var(--color-orange);
+            }
+        }
+
+        &-blockCheckbox {
+            width: 100%;
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            column-gap: rem(12);
+        }
+
+        &-text {
+            font-size: rem(14);
+            color: var(--color-dark);
+        }
+
+        &-div {
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(4);
+        }
+
+        &-checkboxInput {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            appearance: none;
+            width: rem(16);
+            height: rem(16);
+            border: var(--color-orange);
+            border-radius: rem(4);
+            background-color: var(--color-orange);
+            
+            &:not(:checked) {
+                &::after {
+                    @include hide;
+                }
+            }
+
+            &::after {
+                content: '';
+                width: rem(10);
+                height: rem(8);
+                color: var(--color-light);
+                background: url('../../icons/details/check.svg') center/cover no-repeat;
+                transition-duration: var(--transition-duration);
+            }    
+        }
+    }
+}

@@ -1,0 +1,125 @@
+@use '../helpers' as *;
+
+.team {
+    &__title {
+        padding-top: rem(180);
+        padding-bottom: rem(110);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: rem(60);
+
+        @include mobile {
+            padding-top: rem(120);
+            padding-bottom: rem(80);
+            row-gap: rem(30);
+        }
+
+        &-block {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            column-gap: rem(102);
+            row-gap: rem(30);
+
+            @include laptop {
+                grid-template-columns: repeat(3, 1fr);
+                row-gap: rem(50);
+            }
+
+            @include mobile {
+                column-gap: rem(30);
+                row-gap: rem(30);
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            &--link {
+                @include hover {
+                    transform: scale(1.1);
+                }
+            }
+
+            &--img {
+                @include hover {
+                    filter: drop-shadow(0 0 0.55rem var(--color-orange));
+                    transition-duration: var(--transition-duration);
+                }
+            }
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(60);
+
+        &-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: rem(24);
+        }
+
+        &-descrpiption {
+            font-size: rem(20);
+        }
+
+        &-div {
+            display: grid;
+            grid-template-columns: repeat(4, 2fr);
+            row-gap: rem(60);
+
+            @include laptop {
+                grid-template-columns: repeat(3, 2fr);
+            }
+
+            @include tablet {
+                grid-template-columns: repeat(2, 2fr);
+            }
+
+            @include mobile {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        &-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: rem(16);
+
+            &--div {
+                text-align: center;
+            }
+
+            &--description {
+                font-size: rem(16);
+            }
+        }
+
+        &-text {
+            display: flex;
+            justify-content: center;
+            padding-bottom: rem(120);
+
+            @include tablet {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            &--description {
+                font-size: rem(20);
+            }
+
+            &--link {
+                font-size: rem(20);
+                color: var(--color-orange);
+                text-decoration: solid;
+
+                @include hover {
+                    color: var(--color-darkGrey);
+                }
+            }
+        }
+    }
+}

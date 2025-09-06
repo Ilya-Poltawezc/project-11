@@ -1,0 +1,157 @@
+@use '../helpers' as *;
+
+.ceo {
+    padding-block: rem(120);
+    background: url('../../images/ceo/bg-image.png') right/20% no-repeat;
+
+    @include mobile {
+        padding-block: rem(80);
+    }
+
+    &__title {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        place-items: center center;
+
+        @include laptop {
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: rem(40);
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+
+        &-card {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            row-gap: rem(20);
+
+            &--svg {
+                width: rem(48);
+                height: rem(48);
+            }
+        }
+
+        &-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &--title {
+                font-size: rem(46);
+                color: var(--color-orange);
+                font-weight: 700;
+            }
+
+            &--description {
+                font-size: rem(14);
+                color: var(--color-darkGrey);
+            }
+        }
+    }
+
+    &__body {
+        padding-top: rem(120);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include laptop {
+            flex-direction: column;
+            row-gap: rem(40);
+        }
+
+        &-img {
+            margin-top: rem(160);
+            border-radius: rem(4);
+
+            @include laptop {
+                margin-top: 0;
+            }
+        }
+
+        &-block {
+            margin-left: rem(-30);
+            padding: rem(80) rem(95);
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(50);
+            border-radius: rem(4);
+            background-color: var(--color-light);
+            box-shadow: 0 4px 4px -4px rgba(30, 33, 44, 0.03), 0 12px 10px -6px rgba(154, 156, 165, 0.04), 0 30px 24px -10px rgba(154, 156, 165, 0.05), 0 80px 80px -20px rgba(154, 156, 165, 0.08);
+
+            @include laptop {
+                margin-left: 0;
+            }
+
+            @include mobile {
+                row-gap: rem(30);
+                padding: rem(20) rem(15);
+            }
+
+            &--description {
+                @include fluid-text(20, 16);
+
+                display: flex;
+                column-gap: rem(30);
+                font-weight: 700;
+                color: var(--color-dark);
+
+                @include mobile {
+                    column-gap: rem(10);
+                }
+
+                &::before {
+                    content: ' ';
+                    width: rem(28);
+                    height: rem(20);
+                    background: url('../../icons/ceo/braces.svg') center/cover no-repeat;
+                }
+            }
+
+            &--descriptionTwo {
+                @include fluid-text(20, 16);
+
+                padding-left: rem(58);
+                font-weight: 700;
+                color: var(--color-dark);
+
+                @include mobile {
+                    padding-left: rem(25);
+                }
+            }
+        }
+
+        &-div {
+            padding-left: rem(58);
+            display: flex;
+            justify-content: space-between;
+
+            @include mobile {
+                padding-left: rem(25);
+            }
+
+            &--svg {
+                width: rem(100);
+                height: rem(68);
+                color: var(--color-orange);
+            }
+        }
+
+        &-div1 {
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(4);
+
+            &--title {
+                font-size: rem(16);
+            }
+
+            &--description {
+                font-size: rem(14);
+            }
+        }
+    }
+}

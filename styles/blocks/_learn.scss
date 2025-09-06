@@ -1,0 +1,95 @@
+@use '../helpers' as *;
+
+.learn {
+    background: url('../../images/learn/Background.png') center/cover no-repeat;
+
+    &__block {
+        padding-block: rem(140);
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(120);
+
+        @include tablet {
+            row-gap: rem(40);
+        }
+
+        @include mobile {
+            padding-block: rem(40);
+        }
+
+        &-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: rem(1);
+
+            @include laptop {
+                column-gap: rem(30);
+            }
+
+            @include tablet {
+                padding-bottom: rem(20);
+                border-bottom: var(--borderGrey);
+                flex-direction: column;
+                row-gap: rem(20);
+                column-gap: 0;
+
+                &:nth-child(4) {
+                    border: none;
+                }
+            }
+
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+
+                @include laptop {
+                    column-gap: rem(30);
+                }
+
+                @include tablet {
+                    flex-direction: column;
+                    row-gap: rem(20);
+                    column-gap: 0;
+                } 
+            }
+        }
+
+        &-img {
+            border-radius: rem(4);
+        }
+
+        &-block {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            row-gap: rem(48);
+
+            &--button {
+                background-color: transparent;
+                color: var(--color-orange);
+                padding-inline: rem(32);
+
+                @include hover {
+                    background-color: var(--color-orange);
+                    color: var(--color-light);
+                }
+            }
+        }
+
+        &-div {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            row-gap: rem(24);
+
+            &--title {
+                font-size: rem(32);
+            }
+
+            &--description {
+                color: var(--color-text);
+                font-size: rem(16);
+            }
+        }
+    }
+}

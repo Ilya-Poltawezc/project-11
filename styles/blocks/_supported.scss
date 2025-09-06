@@ -1,0 +1,110 @@
+@use '../helpers' as *;
+
+.supported {
+    background-color: var(--color-form);
+
+    &__title {
+        padding-top: rem(80);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: rem(60);
+
+        @include mobile {
+            row-gap: rem(30);
+        }
+
+        &-block {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            column-gap: rem(102);
+
+            @include laptop {
+                grid-template-columns: repeat(3, 1fr);
+                row-gap: rem(50);
+            }
+
+            @include mobile {
+                column-gap: rem(30);
+                row-gap: rem(30);
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            &--link {
+                @include hover {
+                    transform: scale(1.1);
+                }
+            }
+
+            &--img {
+                @include hover {
+                    filter: drop-shadow(0 0 0.55rem var(--color-orange));
+                    transition-duration: var(--transition-duration);
+                }
+            }
+        }
+    }
+
+    &__body {
+        padding-top: rem(170);
+        display: flex;
+        justify-content: space-between;
+        column-gap: rem(75);
+
+        @include tablet {
+            flex-direction: column;
+            row-gap: rem(40);
+            align-items: center;
+        }
+
+        @include mobile {
+            padding-top: rem(70);
+        }
+
+        &-block {
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(24);
+
+            &--description {
+                font-size: rem(16);
+                color: var(--color-darkGrey);
+            }
+        }
+
+        &-div {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+        }
+
+        &-block2 {
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(4);
+
+            &--title {
+                font-size: rem(16);
+            }
+
+            &--description {
+                font-size: rem(14);
+            }
+        }
+
+        &-buttons {
+            display: flex;
+            column-gap: rem(5);
+
+            &--svg {
+                width: rem(24);
+                aspect-ratio: 1;
+            }
+        }
+
+        &-img {
+            margin-bottom: rem(-60);
+            border-radius: rem(4);
+        }
+    }
+}

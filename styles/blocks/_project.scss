@@ -1,0 +1,113 @@
+@use '../helpers' as *;
+
+.project {
+    &__title {
+        padding-top: rem(120);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include tablet {
+            flex-direction: column;
+            row-gap: rem(10);
+        }
+
+        &-block {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: rem(3);
+
+            &--button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: rem(48);
+                aspect-ratio: 1;
+                border: none;
+                border-radius: 50%;
+                background-color: transparent;
+
+                @include hover {
+                    background-color: var(--color-orange);
+                    color: var(--color-light);
+                }
+            }
+        }
+
+        &-svg {
+            width: rem(24);
+            aspect-ratio: 1;
+        }
+    }
+
+    &__body {
+        padding-top: rem(60);
+        display: flex;
+        justify-content: center;
+        column-gap: rem(30);
+
+        @include tablet {
+            flex-wrap: wrap;
+            row-gap: rem(30);
+        }
+
+        @include mobile {
+            padding-top: rem(30);
+        }
+
+        &-card {
+            //max-height: rem(500);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: rem(24);
+            padding-bottom: rem(24);
+            border-radius: rem(4);
+            box-shadow: 0 4px 4px -4px rgba(30, 33, 44, 0.03), 0 12px 10px -6px rgba(154, 156, 165, 0.04), 0 30px 24px -10px rgba(154, 156, 165, 0.05), 0 80px 80px -20px rgba(154, 156, 165, 0.08);
+            width: rem(390);
+            cursor: pointer;
+        }
+
+        &-div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &--title {
+                font-size: rem(20);
+            }
+
+            &--description {
+                font-size: rem(14);
+            }
+        }
+
+        &-button {
+            @include hide;
+
+            max-height: rem(0);
+        }
+    }
+
+    &__block {
+        padding-top: rem(80);
+        padding-bottom: rem(125);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: rem(40);
+
+        @include mobile {
+            flex-direction: column;
+            row-gap: rem(30);
+            padding-bottom: rem(25);
+        }
+
+        &-description {
+            font-size: rem(28);
+            color: var(--color-dark);
+            font-weight: 700;
+        }
+    }
+}
