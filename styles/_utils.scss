@@ -104,3 +104,9 @@
 .active {
     color: var(--color-orange);
 }
+
+.close-menu {
+    @include visually-hidden;
+
+    transition-duration: 0.2s;
+}
