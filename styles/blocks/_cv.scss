@@ -1,0 +1,99 @@
+@use '../helpers' as *;
+
+.cv {
+    z-index: 4;
+    position: relative;
+    top: rem(-700);
+    display: flex;
+    justify-content: center;
+    background-color: rgba(2, 3, 7, 0.686);
+    padding-block: rem(200);
+
+    @include laptop {
+        top: rem(-800);
+    }
+
+    @include mobile {
+        top: rem(-400);
+    }
+
+    &__title {
+        width: rem(390);
+        padding: rem(24);
+        margin-inline: rem(20);
+        background-color: var(--color-light);
+        border-radius: rem(4);
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(20);
+
+        &-flex {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+
+        &-button {
+            width: rem(24);
+            height: rem(24);
+            border: none;
+            background-color: transparent;
+            display: flex;
+        }
+
+        &-title {
+            font-size: rem(20);
+        }
+
+        &-div {
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(8);
+
+            &--label {
+                color: var(--color-darkGrey);
+                font-size: rem(14);
+            }
+
+            &--input {
+                padding-left: rem(16);
+                padding-block: rem(12);
+                font-size: rem(14);
+                border-radius: rem(4);
+                border: rem(1) solid var(--color-grey);
+            }
+
+            &--select {
+                padding: rem(12) rem(16);
+                font-size: rem(14);
+                border-radius: rem(4);
+                border: rem(1) solid var(--color-grey);
+            }
+        }
+
+        &-divTwo {
+            display: flex;
+            align-items: center;
+            column-gap: rem(12);
+
+            &--label {
+                width: rem(24);
+                height: rem(24);
+                background: url('../../icons/cv/Attach.svg') center/cover no-repeat;
+
+                @include hover {
+                    transform: scale(1.1);
+                }
+            }
+
+            &--input {
+                @include visually-hidden;
+            }
+
+            &--description {
+                font-size: rem(14);
+                color: var(--color-text);
+            }
+        }
+    }
+}

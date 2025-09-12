@@ -83,10 +83,10 @@
         </div>
     </header>
     <main class="main" data-js-menu>
-        <div class="modal close-menu" data-js-menu-modal>
+        <div class="modal close-menu" data-js-menu-modal1>
             <div class="modal__title">
                 <div class="modal__title-flex">
-                    <button class="modal__title-button" title="Close" data-js-menu-close>
+                    <button class="modal__title-button" title="Close" data-js-menu-close1>
                     <svg class="modal__title-button--svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M4.29289 4.29289C4.68342 3.90237 5.31658 3.90237 5.70711 4.29289L12 10.5858L18.2929 4.29289C18.6834 3.90237 19.3166 3.90237 19.7071 4.29289C20.0976 4.68342 20.0976 5.31658 19.7071 5.70711L13.4142 12L19.7071 18.2929C20.0976 18.6834 20.0976 19.3166 19.7071 19.7071C19.3166 20.0976 18.6834 20.0976 18.2929 19.7071L12 13.4142L5.70711 19.7071C5.31658 20.0976 4.68342 20.0976 4.29289 19.7071C3.90237 19.3166 3.90237 18.6834 4.29289 18.2929L10.5858 12L4.29289 5.70711C3.90237 5.31658 3.90237 4.68342 4.29289 4.29289Z" fill="#787A80"/>
                     </svg>
@@ -102,6 +102,50 @@
                     <input class="modal__title-div--input" type="email" id="email" placeholder="Your working email" required>
                 </div>
                 <button class="modal__title-buttons button">send</button>
+            </div>
+        </div>
+        <div class="cv close-menu" data-js-menu-modal2>
+            <div class="cv__title">
+                <div class="cv__title-flex">
+                    <button class="cv__title-button" title="Close" data-js-menu-close2>
+                    <svg class="cv__title-button--svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.29289 4.29289C4.68342 3.90237 5.31658 3.90237 5.70711 4.29289L12 10.5858L18.2929 4.29289C18.6834 3.90237 19.3166 3.90237 19.7071 4.29289C20.0976 4.68342 20.0976 5.31658 19.7071 5.70711L13.4142 12L19.7071 18.2929C20.0976 18.6834 20.0976 19.3166 19.7071 19.7071C19.3166 20.0976 18.6834 20.0976 18.2929 19.7071L12 13.4142L5.70711 19.7071C5.31658 20.0976 4.68342 20.0976 4.29289 19.7071C3.90237 19.3166 3.90237 18.6834 4.29289 18.2929L10.5858 12L4.29289 5.70711C3.90237 5.31658 3.90237 4.68342 4.29289 4.29289Z" fill="#787A80"/>
+                    </svg>
+                </button>
+                </div>
+                <h2 class="cv__title-title">Send your CV</h2>
+                <div class="cv__title-div">
+                    <label class="cv__title-div--label" for="nameCv">Name*</label>
+                    <input class="cv__title-div--input" type="name" id="nameCv" required placeholder="Your name">
+                </div>
+                <div class="cv__title-div">
+                    <label class="cv__title-div--label" for="location">Location*</label>
+                    <select class="cv__title-div--select" name="location" id="location">
+                        <option class="cv__title-div--option" value="Choose your location">Choose your location</option>
+                        <option class="cv__title-div--option" value="1">1</option>
+                        <option class="cv__title-div--option" value="2">2</option>
+                        <option class="cv__title-div--option" value="3">3</option>
+                    </select>
+                </div>
+                <div class="cv__title-div">
+                    <label class="cv__title-div--label" for="phoneCv">Phone*</label>
+                    <input class="cv__title-div--input" type="phone" id="phoneCv" required placeholder="Your phone number">
+                </div>
+                <div class="cv__title-div">
+                    <label class="cv__title-div--label" for="emailCv">Email*</label>
+                    <input class="cv__title-div--input" type="email" id="emailCv" required placeholder="Your working email">
+                </div>
+                <div class="cv__title-div">
+                    <label class="cv__title-div--label" for="letterCv">Covering letter</label>
+                    <textarea class="cv__title-div--input" name="text" id="letterCv" placeholder="Your covering letter"></textarea>
+                </div>
+                <div class="cv__title-divTwo">
+                    <label class="cv__title-divTwo--label" for="file" title="Attach file">
+                        <input class="cv__title-divTwo--input" id="file" type="file">
+                    </label>
+                    <p class="cv__title-divTwo--description">Attach your CV*</p>
+                </div>
+                <button class="cv__title-buttons button">send</button>
             </div>
         </div>
         <section class="find container">
@@ -168,8 +212,8 @@
                     <p class="find__body-block1--description">Send your CV or subscribe to our newsletter to<br/> receive information about new vacancies.</p>
                 </div>
                 <div class="find__body-block2">
-                    <button class="find__body-block2 button">subscribe</button>
-                    <button class="find__body-block2 button" data-js-menu-button>send cv</button>
+                    <button class="find__body-block2 button" data-js-menu-button1>subscribe</button>
+                    <button class="find__body-block2 button" data-js-menu-button2>send cv</button>
                 </div>
             </div>
         </section>
