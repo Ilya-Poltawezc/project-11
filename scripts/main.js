@@ -6,6 +6,7 @@ import Validation from "./Validation.js";
 import Over from "./Over.js";
 import Active from "./Active.js";
 import Modal from "./Modal.js";
+import Slider from "./Slider.js";
 
 new HeaderDrop()
 new Button()
@@ -15,3 +16,4 @@ new Validation()
 new Over()
 new Active()
 new Modal()
+new Slider()

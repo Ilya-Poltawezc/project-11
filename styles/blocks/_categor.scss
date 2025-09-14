@@ -1,0 +1,48 @@
+@use '../helpers' as *;
+
+.categor {
+    padding-top: rem(120);
+
+    @include mobile {
+        padding-top: rem(50);
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: rem(40);
+
+        &-title {
+            font-size: rem(46);
+        }
+
+        &-div {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+
+            @include laptop {
+                grid-template-columns: repeat(3, 1fr);
+                row-gap: rem(10);
+            }
+
+            @include mobile {
+                grid-template-columns: 1fr;
+            }
+
+            &--button {
+                font-size: rem(18);
+                font-weight: 700;
+                color: var(--color-grey);
+                border: none;
+                background-color: transparent;
+                width: rem(205);
+                height: rem(46);
+
+                @include hover {
+                    color: var(--color-orange);
+                }
+            }
+        }
+    }
+}
