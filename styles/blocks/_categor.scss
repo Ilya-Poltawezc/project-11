@@ -45,4 +45,163 @@
             }
         }
     }
+
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: rem(30);
+        row-gap: rem(60);
+        padding-block: rem(60);
+
+        @include mobile {
+            grid-template-columns: 1fr;
+            row-gap: rem(30);
+            place-items: center center;
+            padding-top: rem(80);
+        }
+
+        &-title {
+            display: flex;
+            justify-content: center;
+        }
+
+        &-block {
+            padding-top: rem(60);
+            display: grid;
+            grid-template-columns: 56.99% auto;
+            column-gap: rem(30);
+            place-items: start center;
+
+            @include tablet {
+                grid-template-columns: 1fr;
+                row-gap: rem(20);
+            }
+        }
+
+        &-card {
+            max-width: rem(700);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: rem(15);
+            padding-bottom: rem(25);
+            border-radius: rem(4);
+            box-shadow: var(--box-shadowGrey);
+
+            &--link1 {
+                padding-top: rem(15);
+                padding-inline: rem(24);
+                font-size: rem(20);
+                font-weight: 700;
+            }
+
+            &--link {
+                padding-inline: rem(24);
+                font-size: rem(20);
+                font-weight: 700;
+            }
+
+            &--description {
+                font-size: rem(16);
+                padding-inline: rem(24);
+                color: var(--color-darkGrey);
+            }
+        }
+
+        &-div {
+            display: flex;
+            align-items: center;
+            column-gap: rem(12);
+            padding-inline: rem(24);
+
+            &--text {
+                font-size: rem(14);
+                color: #787A80;
+
+                &:nth-child(2) {
+                    padding-inline: rem(12);
+                    border-inline: rem(1) solid #787A80;
+                }
+            }
+        }
+
+        &-cell {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: rem(3);
+
+            &--button {
+                width: rem(16);
+                height: rem(16);
+                border: none;
+                background-color: transparent;
+                background: url('../../icons/some/Chat.svg') center/cover no-repeat;
+
+                @include hover {
+                    filter: drop-shadow(0 0 0.25rem var(--color-orange));
+                    transition-duration: var(--transition-duration);
+                }
+            }
+
+            &--text {
+                font-size: rem(14);
+                color: #787A80;
+
+                @include mobile {
+                    display: none;
+                }
+            }
+        }
+
+        &-blockTwo {
+            display: grid;
+            grid-template-columns: 1fr;
+            align-items: center;
+            row-gap: rem(20);
+        }
+    }
+
+    &__block {
+        padding-bottom: rem(180);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: rem(20);
+
+        @include mobile {
+            padding-bottom: rem(60);
+        }
+
+        &-button {
+            border: none;
+            background-color: transparent;
+            font-size: rem(16);
+            font-weight: 700;
+
+            @include hover {
+                color: var(--color-orange);
+            }
+        }
+
+        &-buttons {
+            background-color: transparent;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            width: rem(30);
+            height: rem(24);
+
+            @include hover {
+                color: var(--color-orange);
+            }
+
+            &--svg {
+                width: rem(24);
+                height: rem(24);
+                color: var(--color-dark);
+            }
+        }
+    }
 }
