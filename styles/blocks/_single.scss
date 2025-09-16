@@ -1,0 +1,249 @@
+@use '../helpers' as *;
+
+.single {
+    background-color: var(--color-form);
+
+    &__div {
+        padding-block: rem(22);
+        display: flex;
+        justify-content: center;
+        column-gap: rem(172);
+
+        @include laptop {
+            flex-direction: column;
+            align-items: center;
+            row-gap: rem(30);
+        } 
+        
+        @include mobile {
+            padding-inline: rem(22);
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: start;
+            column-gap: 0;
+        }
+    }
+
+
+    &__body {
+        display: flex;
+        align-items: center;
+        column-gap: rem(60);
+
+        @include mobile {
+            row-gap: rem(10);
+            flex-direction: column;
+        }
+
+        &-list {
+            display: flex;
+            column-gap: rem(40);
+
+            @include mobile {
+                width: 0;
+                max-height: 0;
+                overflow-y: hidden;
+                transition-duration: 0.2s;
+            }
+        }
+
+        &-link {
+            font-size: rem(16);
+            font-weight: 700;
+        }
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        column-gap: rem(36);
+
+        @include mobile {
+            @include visually-hidden;
+
+            flex-direction: column;
+            align-items: start;
+            row-gap: rem(10);
+        }
+
+        &-div1 {
+            display: flex;
+            align-items: center;
+            column-gap: rem(12);
+
+            &::before {
+                content: ' ';
+                width: rem(40);
+                height: rem(38);
+                background: url('../../icons/header-phone.svg');
+            }
+        }
+
+        &-div2 {
+            display: flex;
+            align-items: center;
+            column-gap: rem(12);
+
+            &::before {
+                content: ' ';
+                width: rem(40);
+                height: rem(38);
+                background: url('../../icons/header-chat.svg');
+            }
+        }
+
+        &-block {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-description {
+            font-size: rem(14);
+            font-weight: 700;
+            color: var(--color-dark);
+        }
+
+        &-contacts {
+            font-size: rem(18);
+        }
+    }
+
+    &__button {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: center;
+        row-gap: rem(5);
+        width: rem(40);
+        height: rem(30);
+        background-color: transparent;
+        border: none;
+
+        @include mobile {
+            @include show;
+        }
+        
+        &-slash {
+            width: 100%;
+            height: rem(2);
+            background-color: var(--color-darkGrey);
+            border-radius: rem(6);
+
+            &:nth-child(3) {
+                width: rem(15);
+            }
+        }
+    }
+
+    &__block {
+        padding-top: rem(80);
+        padding-bottom: rem(179);
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(40);
+
+        @include mobile {
+            padding-top: rem(10);
+            padding-bottom: rem(40);
+            row-gap: rem(20);
+        }
+
+        &-block {
+            display: flex;
+            column-gap: rem(8);
+
+            &--description {
+                font-size: rem(14);
+                color: var(--color-darkGrey);
+            }
+
+            &--desc {
+                font-size: rem(14);
+            }
+        }
+
+        &-description {
+            @include fluid-text(20, 16);
+
+            color: var(--color-text);
+
+            @include mobile {
+                color: var(--color-darkGrey);
+            }
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        justify-content: space-between;
+
+        @include mobile {
+            flex-direction: column;
+            row-gap: rem(40);
+        }
+
+        &-div {
+            display: flex;
+            column-gap: rem(12);
+
+            &--text {
+                font-size: rem(16);
+                color: var(--color-orange);
+                font-weight: 700;
+            }
+
+            &--text1 {
+                display: flex;
+                align-items: center;
+                column-gap: rem(8);
+                font-size: rem(16);
+                padding-inline: rem(12);
+                border-inline: 1px solid var(--color-text);
+
+                &::before {
+                    content: ' ';
+                    width: rem(20);
+                    height: rem(20);
+                    background: url('../../icons/single/Clock.svg') center/cover no-repeat;
+                }
+            }
+        }
+
+        &-cell {
+            display: flex;
+            column-gap: rem(8);
+            align-items: center;
+
+            &--button {
+                width: rem(16);
+                height: rem(16);
+                border: none;
+                background: url(../../icons/some/Chat.svg) center / cover no-repeat;
+            }
+
+            &--text {
+                font-size: rem(16);
+
+                @include mobile {
+                    @include visually-hidden;
+                }
+            }
+        }
+
+        &-divTwo {
+            display: flex;
+            column-gap: rem(12);
+
+            &--svg {
+                width: rem(24);
+                height: rem(24);
+                color: var(--color-text);
+
+                @include hover {
+                    color: var(--color-orange);
+                }
+            }
+        }
+    }
+}
