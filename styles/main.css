@@ -5643,4 +5643,90 @@ h5 {
   }
 }
 
+.page {
+  margin-top: -6.25rem;
+}
+@media (width <= 47.99875rem) {
+  .page {
+    margin-top: 0;
+  }
+}
+.page__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 5rem;
+}
+@media (width <= 47.99875rem) {
+  .page__title {
+    row-gap: 1.875rem;
+  }
+}
+.page__title-div {
+  max-width: 50.625rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+.page__title-div--title {
+  font-size: 1.25rem;
+}
+.page__title-div--title1 {
+  font-size: 1.25rem;
+  display: flex;
+  column-gap: 1.875rem;
+}
+.page__title-div--title1::before {
+  content: " ";
+  width: 6.25rem;
+  height: 1.25rem;
+  color: var(--color-orange);
+  background: url("../../icons/page/braces.svg") center/cover no-repeat;
+}
+.page__title-div--description {
+  font-size: 1rem;
+}
+.page__title-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.25rem;
+}
+.page__title-text {
+  font-size: 1rem;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+.page__title-text::before {
+  content: " ";
+  width: 1rem;
+  height: 1rem;
+  background: url("../../icons/page/check.svg") center/cover no-repeat;
+}
+.page__title-block {
+  display: flex;
+  column-gap: 0.75rem;
+}
+.page__title-block--description {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-dark);
+}
+.page__title-block--svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--color-text);
+}
+@media (any-hover: hover) {
+  .page__title-block--svg:hover {
+    color: var(--color-orange);
+  }
+}
+@media (any-hover: none) {
+  .page__title-block--svg:active {
+    color: var(--color-orange);
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
