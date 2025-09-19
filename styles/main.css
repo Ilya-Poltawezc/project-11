@@ -5698,6 +5698,12 @@ h5 {
   align-items: center;
   column-gap: 1rem;
 }
+@media (width <= 47.99875rem) {
+  .page__title-text {
+    display: grid;
+    grid-template-columns: 7% auto;
+  }
+}
 .page__title-text::before {
   content: " ";
   width: 1rem;
@@ -5727,6 +5733,93 @@ h5 {
   .page__title-block--svg:active {
     color: var(--color-orange);
   }
+}
+.page__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5rem;
+}
+@media (width <= 47.99875rem) {
+  .page__body {
+    padding-top: 2.5rem;
+  }
+}
+.page__body-title {
+  font-size: 2.875rem;
+  display: flex;
+  justify-content: center;
+}
+.page__body-block {
+  max-width: 50.625rem;
+  padding-top: 3.75rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3.75rem;
+}
+.page__body-card {
+  display: grid;
+  grid-template-columns: 30% auto;
+}
+@media (width <= 47.99875rem) {
+  .page__body-card {
+    grid-template-columns: 1fr;
+    row-gap: 0.9375rem;
+  }
+}
+.page__body-card-block1 {
+  display: flex;
+  flex-direction: column;
+  column-gap: 0.5rem;
+}
+.page__body-card-block1--title {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+.page__body-card-block1--description {
+  font-size: 0.875rem;
+}
+.page__body-card-block2 {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  row-gap: 1rem;
+}
+.page__body-card-block2--description {
+  font-size: 1rem;
+  color: var(--color-text);
+}
+.page__body-card-block2--button {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  background-color: transparent;
+  border: none;
+  font-size: 0.875rem;
+  color: var(--color-grey);
+}
+.page__body-card-block2--button::before {
+  content: " ";
+  width: 1rem;
+  height: 1rem;
+  background: url("../../icons/page/share-arrow.svg") center/cover no-repeat;
+}
+@media (any-hover: hover) {
+  .page__body-card-block2--button:hover {
+    color: var(--color-orange);
+    transform: scale(1.1);
+  }
+}
+@media (any-hover: none) {
+  .page__body-card-block2--button:active {
+    color: var(--color-orange);
+    transform: scale(1.1);
+  }
+}
+.page__body-card-block2--link {
+  color: var(--color-orange);
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=main.css.map */

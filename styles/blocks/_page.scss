@@ -59,6 +59,11 @@
             align-items: center;
             column-gap: rem(16);
 
+            @include mobile {
+                display: grid;
+                grid-template-columns: 7% auto;
+            }
+
             &::before {
                 content: ' ';
                 width: rem(16);
@@ -84,6 +89,96 @@
 
                 @include hover {
                     color: var(--color-orange);
+                }
+            }
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: rem(80);
+
+        @include mobile {
+            padding-top: rem(40);
+        }
+
+        &-title {
+            font-size: rem(46);
+            display: flex;
+            justify-content: center;
+        }
+
+        &-block {
+            max-width: rem(810);
+            padding-top: rem(60);
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(60);
+        }
+
+        &-card {
+            display: grid;
+            grid-template-columns: 30% auto;
+
+            @include mobile {
+                grid-template-columns: 1fr;
+                row-gap: rem(15);
+            }
+
+            &-block1 {
+                display: flex;
+                flex-direction: column;
+                column-gap: rem(8);
+
+                &--title {
+                    font-size: rem(18);
+                    font-weight: 700;
+                }
+
+                &--description {
+                    font-size: rem(14);
+                }
+            }
+
+            &-block2 {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                row-gap: rem(16);
+
+                &--description {
+                    font-size: rem(16);
+                    color: var(--color-text);
+                }
+
+                &--button {
+                    display: flex;
+                    align-items: center;
+                    column-gap: rem(8);
+                    background-color: transparent;
+                    border: none;
+                    font-size: rem(14);
+                    color: var(--color-grey);
+
+                    &::before {
+                        content: ' ';
+                        width: rem(16);
+                        height: rem(16);
+                        background: url('../../icons/page/share-arrow.svg') center/cover no-repeat;
+                    }
+
+                    @include hover {
+                        color: var(--color-orange);
+                        transform: scale(1.1);
+                    }
+                }
+
+                &--link {
+                    color: var(--color-orange);
+                    font-size: rem(16);
+                    font-weight: 700;
                 }
             }
         }
