@@ -5644,6 +5644,9 @@ h5 {
 }
 
 .page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: -6.25rem;
 }
 @media (width <= 47.99875rem) {
@@ -5673,12 +5676,13 @@ h5 {
 }
 .page__title-div--title1 {
   font-size: 1.25rem;
-  display: flex;
-  column-gap: 1.875rem;
+  display: grid;
+  grid-template-columns: 7% auto;
+  column-gap: 1.25rem;
 }
 .page__title-div--title1::before {
   content: " ";
-  width: 6.25rem;
+  width: 1.875rem;
   height: 1.25rem;
   color: var(--color-orange);
   background: url("../../icons/page/braces.svg") center/cover no-repeat;
@@ -5820,6 +5824,56 @@ h5 {
   color: var(--color-orange);
   font-size: 1rem;
   font-weight: 700;
+}
+.page__form {
+  width: 100%;
+  padding-top: 5rem;
+  padding-block: 7.5rem;
+  max-width: 50.625rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 3rem;
+}
+@media (width <= 47.99875rem) {
+  .page__form {
+    row-gap: 1.5rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+.page__form-title {
+  font-size: 2.875rem;
+}
+.page__form-block {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  column-gap: 1.875rem;
+  justify-content: space-between;
+}
+@media (width <= 47.99875rem) {
+  .page__form-block {
+    flex-direction: column;
+    row-gap: 1.875rem;
+  }
+}
+.page__form-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+.page__form-div--label {
+  font-size: 1rem;
+  color: var(--color-text);
+}
+.page__form-div--input {
+  background-color: var(--color-form);
+  border: 0.0625rem solid var(--color-grey);
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  padding: 0.8125rem 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */
