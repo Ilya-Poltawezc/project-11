@@ -11,6 +11,7 @@ class Validation {
 
     constructor() {
         this.rootElement = document.querySelector(this.selectors.root)
+        if(!this.rootElement) return
         this.labelElement = this.rootElement.querySelector(this.selectors.label)
         this.inputElement - this.rootElement.querySelector(this.selectors.input)
         this.bindEvents()

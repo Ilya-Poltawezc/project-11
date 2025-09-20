@@ -1,0 +1,127 @@
+@use '../helpers' as *;
+
+.information {
+    padding-block: rem(122);
+
+    @include mobile {
+        padding-block: rem(50);
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: rem(24);
+
+        &-description {
+            font-size: rem(18);
+        }
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        padding-top: rem(60);
+
+        @include laptop {
+            flex-direction: column;
+            row-gap: rem(40);
+            align-items: center;
+        }
+
+        &-form {
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(24);
+        }
+
+        &-block {
+            display: flex;
+            column-gap: rem(30);
+
+            @include mobile {
+                flex-direction: column;
+                row-gap: rem(30);
+            }
+        }
+
+        &-div {
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(8);
+
+            &--label {
+                font-size: rem(16);
+                color: var(--color-text);
+            }
+
+            &--input {
+                background-color: var(--color-form);
+                border: rem(1) solid var(--color-grey);
+                border-radius: rem(4);
+                padding: rem(13) rem(16);
+                font-size: rem(16);
+            }
+
+            &--select {
+                background-color: var(--color-form);
+                border: rem(1) solid var(--color-grey);
+                border-radius: rem(4);
+                padding: rem(13) rem(16);
+                width: rem(285);
+                font-size: rem(16);
+            }
+
+            &--description {
+                font-size: rem(16);
+                color: var(--color-text);
+            }
+        }
+
+        &-div1 {
+            display: flex;
+            column-gap: rem(24);
+
+            &--description {
+                font-size: rem(16);
+                color: var(--color-dark);
+            }
+        }
+
+        &-cell {
+            display: flex;
+            align-items: center;
+            column-gap: rem(12);
+
+            &--check {
+                width: rem(16);
+                height: rem(16);
+                border-radius: 50%;
+                border: rem(2) solid green;
+                background-color: transparent;
+                border: none;
+            }
+        }
+
+        &-block1 {
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(8);
+        }
+
+        &-car {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @include mobile {
+                flex-direction: column;
+                row-gap: rem(30);
+            }
+        }
+
+        &-button {
+            white-space: nowrap;
+        }
+    }
+}
