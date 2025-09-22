@@ -1,0 +1,106 @@
+@use '../helpers' as *;
+
+.offices {
+    &__title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: rem(24);
+
+        &-description {
+            font-size: rem(18);
+        }
+    }
+
+    &__body {
+        padding-top: rem(60);
+        display: flex;
+        justify-content: space-between;
+
+        @include tablet {
+            flex-wrap: wrap;
+            align-items: center;
+            row-gap: rem(30);
+        }
+
+        @include mobile {
+            flex-direction: column;
+        }
+
+        &-card {
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(16);
+
+            &--title {
+                font-size: rem(28);
+            }
+
+            &--description {
+                font-size: rem(16);
+                color: var(--color-text);
+            }
+
+            &--link {
+                max-width: rem(113);
+                font-size: rem(16);
+                color: var(--color-orange);
+                border-bottom: rem(2) solid var(--color-orange);
+            }
+        }
+
+        &-div {
+            display: flex;
+            column-gap: rem(4);
+
+            &--description {
+                font-size: rem(16);
+            }
+
+            &--link {
+                font-size: rem(16);
+            }
+        }
+
+        &-cel {
+            border: rem(1) solid rgb(2, 3, 4, 0.1);
+
+            @include mobile {
+                width: 100%;
+            }
+        }
+    }
+
+    &__div {
+        padding-block: rem(120);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: rem(40);
+
+        @include mobile {
+            padding-block: rem(40);
+        }
+
+        &-title {
+            &--title {
+                font-size: rem(46);
+                color: var(--color-dark);
+            }
+        }
+
+        &-block {
+            display: flex;
+            column-gap: rem(24);
+
+            &--link {
+                color: var(--color-text);
+            }
+
+            &--svg {
+                width: rem(32);
+                height: rem(32);
+            }
+        }
+    }
+}
