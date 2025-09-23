@@ -12,6 +12,10 @@
             row-gap: rem(10);
         }
 
+        @include mobile {
+            padding-top: rem(50);
+        }
+
         &-block {
             display: flex;
             justify-content: center;

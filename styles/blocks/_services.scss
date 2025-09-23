@@ -11,6 +11,10 @@
         row-gap: rem(24);
         padding-top: rem(212);
 
+        @include mobile {
+            padding-top: rem(90);
+        }
+
         &-description {
             font-size: rem(18);
         }

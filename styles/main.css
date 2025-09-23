@@ -691,13 +691,13 @@ h5 {
 }
 @media (any-hover: hover) {
   .createx__title-blocks2--button:hover {
-    background-color: var(--color-orange);
+    background-color: transparent;
     border: 0.0625rem solid var(--color-orange);
   }
 }
 @media (any-hover: none) {
   .createx__title-blocks2--button:active {
-    background-color: var(--color-orange);
+    background-color: transparent;
     border: 0.0625rem solid var(--color-orange);
   }
 }
@@ -917,6 +917,7 @@ h5 {
 }
 @media (width <= 47.99875rem) {
   .values__form {
+    margin-top: 2.5rem;
     margin-inline: 1.25rem;
   }
 }
@@ -1035,6 +1036,11 @@ h5 {
   align-items: center;
   row-gap: 1.5rem;
   padding-top: 13.25rem;
+}
+@media (width <= 47.99875rem) {
+  .services__title {
+    padding-top: 5.625rem;
+  }
 }
 .services__title-description {
   font-size: 1.125rem;
@@ -1206,6 +1212,11 @@ h5 {
   .project__title {
     flex-direction: column;
     row-gap: 0.625rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .project__title {
+    padding-top: 3.125rem;
   }
 }
 .project__title-block {
@@ -4346,7 +4357,7 @@ h5 {
 }
 @media (width <= 47.99875rem) {
   .team__title {
-    padding-top: 7.5rem;
+    padding-top: 3.125rem;
     padding-bottom: 5rem;
     row-gap: 1.875rem;
   }
@@ -4449,6 +4460,11 @@ h5 {
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+}
+@media (width <= 47.99875rem) {
+  .team__body-text {
+    padding-bottom: 3.125rem;
   }
 }
 .team__body-text--description {
@@ -5264,7 +5280,7 @@ h5 {
   max-width: 43.75rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   row-gap: 0.9375rem;
   padding-bottom: 1.5625rem;
   border-radius: 0.25rem;

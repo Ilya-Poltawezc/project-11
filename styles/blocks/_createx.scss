@@ -94,7 +94,7 @@
                 white-space: nowrap;
 
                 @include hover {
-                    background-color: var(--color-orange);
+                    background-color: transparent;
                     border: rem(1) solid var(--color-orange);
                 }
 
